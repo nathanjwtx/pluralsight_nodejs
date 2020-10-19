@@ -8,10 +8,14 @@ let counter = 0
 let myTimer
 
 function startTimer() {
-	if (counter === 6) { stopTimer() }
 	myTimer = setInterval(() => {
 		counter++
+		if (counter === 5) {
+			console.log('done')
+			stopTimer()
+		}
 
+		console.log(counter)
 		console.log('hello world')
 	}, counter * 1000)
 }
